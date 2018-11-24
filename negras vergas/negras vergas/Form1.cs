@@ -61,7 +61,7 @@ namespace negras_vergas
                                 int indexof = streamingCall.ResponseStream.Current.Results[0].ToString().IndexOf("\"", 37);
                                 if (streamingCall.ResponseStream.Current.Results[0].IsFinal)
                                 {
-                                    if (nigger == true && streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).IndexOf("type") >= 0) // i hate black people
+                                    if (nigger == true && streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).IndexOf("type") >= 0)
                                     {
                                         SendKeys.SendWait(streamingCall.ResponseStream.Current.Results[0].ToString().Substring(42, indexof - 42).TrimStart(' '));
                                         Console.WriteLine(streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).TrimStart(' '));
