@@ -63,7 +63,7 @@ namespace negras_vergas
                                 {
                                     if (nigger == true && streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).IndexOf("type") >= 0)
                                     {
-                                        SendKeys.SendWait(streamingCall.ResponseStream.Current.Results[0].ToString().Substring(42, indexof - 42).TrimStart(' '));
+                                        SendKeys.SendWait(streamingCall.ResponseStream.Current.Results[0].ToString().Substring(streamingCall.ResponseStream.Current.Results[0].ToString().IndexOf("type") + 5, indexof - (streamingCall.ResponseStream.Current.Results[0].ToString().IndexOf("type")+5)).TrimStart(' '));
                                         Console.WriteLine(streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).TrimStart(' '));
                                         using (var soundPlayer = new SoundPlayer(@"voice lines\what.wav"))
                                         {
@@ -108,12 +108,16 @@ namespace negras_vergas
                         lock (writeLock)
                         {
                             if (!writeMore) return;
-                            streamingCall.WriteAsync(
-                                new StreamingRecognizeRequest()
-                                {
-                                    AudioContent = Google.Protobuf.ByteString
-                                        .CopyFrom(args.Buffer, 0, args.BytesRecorded)
-                                }).Wait();
+                            try
+                            {
+                                streamingCall.WriteAsync(
+                                    new StreamingRecognizeRequest()
+                                    {
+                                        AudioContent = Google.Protobuf.ByteString
+                                            .CopyFrom(args.Buffer, 0, args.BytesRecorded)
+                                    }).Wait();
+                            }
+                            catch { }
                         }
                     };
                 waveIn.StartRecording();
