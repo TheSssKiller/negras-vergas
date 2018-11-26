@@ -16,19 +16,32 @@ namespace negras_vergas
 {
     public partial class Form1 : Form
     {
+        BackgroundWorker worker;
         public Form1()
         {
             InitializeComponent();
         }
-        static async Task<object> StreamingMicRecognizeAsync(int seconds)
+        void worker_DoWork(object sender, DoWorkEventArgs e)
         {
+
+        }
+        void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            pictureBox1.Size = new Size(1200, 200);
+        }
+
+        private async void Form1_LoadAsync(object help, EventArgs e)
+        {
+            using (var soundPlayer = new SoundPlayer(@"voice lines\sv bicas.wav"))
+            {
+                soundPlayer.Play();
+            }
             bool nigger = false;
             while (true)
             {
                 if (NAudio.Wave.WaveIn.DeviceCount < 1)
                 {
                     //Console.WriteLine("No microphone!");
-                    return -1;
                 }
                 var speech = SpeechClient.Create();
                 var streamingCall = speech.StreamingRecognize();
@@ -63,7 +76,7 @@ namespace negras_vergas
                                 {
                                     if (nigger == true && streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).IndexOf("type") >= 0)
                                     {
-                                        SendKeys.SendWait(streamingCall.ResponseStream.Current.Results[0].ToString().Substring(streamingCall.ResponseStream.Current.Results[0].ToString().IndexOf("type") + 5, indexof - (streamingCall.ResponseStream.Current.Results[0].ToString().IndexOf("type")+5)).TrimStart(' '));
+                                        SendKeys.SendWait(streamingCall.ResponseStream.Current.Results[0].ToString().Substring(streamingCall.ResponseStream.Current.Results[0].ToString().IndexOf("type") + 5, indexof - (streamingCall.ResponseStream.Current.Results[0].ToString().IndexOf("type") + 5)).TrimStart(' '));
                                         Console.WriteLine(streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).TrimStart(' '));
                                         using (var soundPlayer = new SoundPlayer(@"voice lines\what.wav"))
                                         {
@@ -83,6 +96,15 @@ namespace negras_vergas
                                     else if (nigger == true && streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).IndexOf("fortnite") >= 0)
                                     {
                                         System.Diagnostics.Process.Start("https://www.twitch.tv/directory/game/Fortnite");
+                                        using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                                        {
+                                            soundPlayer.Play();
+                                        }
+                                    }
+                                    else if (nigger == true && streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).IndexOf("midget") >= 0)
+                                    {
+                                        pictureBox1.Invoke(new Action(() => pictureBox1.Size = new Size(1200, 200)));
+                                        pictureBox1.Size = new Size(1200, 200);
                                         using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                                         {
                                             soundPlayer.Play();
@@ -130,7 +152,7 @@ namespace negras_vergas
                     };
                 waveIn.StartRecording();
                 Console.WriteLine("Speak now.");
-                await Task.Delay(TimeSpan.FromSeconds(seconds));
+                await Task.Delay(TimeSpan.FromSeconds(60));
                 // Stop recording and shut down.
                 using (var soundPlayer = new SoundPlayer(@"voice lines\oogabooga.wav"))
                 {
@@ -140,15 +162,6 @@ namespace negras_vergas
                 lock (writeLock) writeMore = false;
                 await streamingCall.WriteCompleteAsync();
                 await printResponses;
-            }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            StreamingMicRecognizeAsync(60);
-            using (var soundPlayer = new SoundPlayer(@"voice lines\sv bicas.wav"))
-            {
-                soundPlayer.Play();
             }
         }
 
