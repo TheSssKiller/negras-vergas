@@ -14,14 +14,6 @@ namespace negras_vergas
         {
             InitializeComponent();
         }
-        void worker_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-        void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            pictureBox1.Size = new Size(1200, 200);
-        }
         bool nigger1 = false;
         private async void Form1_LoadAsync(object help, EventArgs e)
         {
