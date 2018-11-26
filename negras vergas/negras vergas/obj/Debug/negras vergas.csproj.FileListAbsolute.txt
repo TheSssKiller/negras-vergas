@@ -103,10 +103,12 @@ C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Deb
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\System.Interactive.Async.xml
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras vergas.csprojAssemblyReference.cache
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras_vergas.Form1.resources
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras_vergas.Properties.Resources.resources
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras vergas.csproj.GenerateResource.cache
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras vergas.csproj.CoreCompileInputs.cache
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras vergas.csproj.CopyComplete
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras vergas.exe
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras vergas.pdb
+C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\RedditSharp.dll
+C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\RedditSharp.xml
+C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras_vergas.nigger.resources
