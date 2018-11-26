@@ -85,7 +85,6 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
-                nigger1 = false;
             }
         }
         private bool mouseDown;
