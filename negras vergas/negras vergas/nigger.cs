@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
 using System.Speech.Recognition;
+using System.Threading;
 
 namespace negras_vergas
 {
@@ -39,6 +40,7 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+                Thread.Sleep(2000);
                 Application.Exit();
                 nigger1 = false;
             }
@@ -67,7 +69,6 @@ namespace negras_vergas
             else if (e.Result.Text.ToLower() == "reddit" && nigger1 == true)
             {
                 Console.Beep(500, 500);
-                //Application.Run(new reddit());
                 reddit f2 = new reddit();
                 f2.ShowDialog();
                 nigger1 = false;
