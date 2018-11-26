@@ -54,54 +54,13 @@ C:\Users\Salvijus\source\repos\negras vergas\negras vergas\obj\Debug\negras verg
 C:\Users\Salvijus\source\repos\negras vergas\negras vergas\obj\Debug\negras vergas.csproj.CopyComplete
 C:\Users\Salvijus\source\repos\negras vergas\negras vergas\obj\Debug\negras vergas.exe
 C:\Users\Salvijus\source\repos\negras vergas\negras vergas\obj\Debug\negras vergas.pdb
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\grpc_csharp_ext.x86.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\grpc_csharp_ext.x64.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\libgrpc_csharp_ext.x86.so
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\libgrpc_csharp_ext.x64.so
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\libgrpc_csharp_ext.x86.dylib
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\libgrpc_csharp_ext.x64.dylib
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\negras vergas.exe.config
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\negras vergas.exe
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\negras vergas.pdb
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Api.CommonProtos.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Api.Gax.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Api.Gax.Grpc.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Apis.Auth.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Apis.Auth.PlatformServices.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Apis.Core.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Apis.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Apis.PlatformServices.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Cloud.Speech.V1.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.LongRunning.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Protobuf.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Grpc.Auth.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Grpc.Core.dll
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\NAudio.dll
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\System.Interactive.Async.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\System.Net.Http.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\System.Security.Cryptography.Algorithms.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\System.Security.Cryptography.Encoding.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\System.Security.Cryptography.Primitives.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Api.CommonProtos.xml
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Api.Gax.pdb
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Api.Gax.xml
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Api.Gax.Grpc.pdb
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Api.Gax.Grpc.xml
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Apis.xml
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Apis.Auth.xml
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Apis.Core.xml
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Cloud.Speech.V1.pdb
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Cloud.Speech.V1.xml
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.LongRunning.pdb
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.LongRunning.xml
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Google.Protobuf.xml
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Grpc.Auth.xml
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Grpc.Core.xml
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\NAudio.xml
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\bin\Debug\System.Interactive.Async.xml
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras vergas.csprojAssemblyReference.cache
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras_vergas.Properties.Resources.resources
 C:\Users\Salvijus\Source\Repos\negras-vergas\negras vergas\negras vergas\obj\Debug\negras vergas.csproj.GenerateResource.cache

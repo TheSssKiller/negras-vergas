@@ -57,6 +57,7 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+                nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "midget" && nigger1 == true)
             {
@@ -69,11 +70,13 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+                nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "reddit" && nigger1 == true)
             {
                 Console.Beep(500, 500);
                 Application.Run(new reddit());
+                nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "nigger" || e.Result.Text.ToLower() == "niger" || e.Result.Text.ToLower() == "nigga")
             {
@@ -82,6 +85,7 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+                nigger1 = false;
             }
         }
         private bool mouseDown;
