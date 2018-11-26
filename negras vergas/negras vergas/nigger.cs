@@ -75,7 +75,9 @@ namespace negras_vergas
             else if (e.Result.Text.ToLower() == "reddit" && nigger1 == true)
             {
                 Console.Beep(500, 500);
-                Application.Run(new reddit());
+                //Application.Run(new reddit());
+                reddit f2 = new reddit();
+                f2.ShowDialog();
                 nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "nigger" || e.Result.Text.ToLower() == "niger" || e.Result.Text.ToLower() == "nigga")
