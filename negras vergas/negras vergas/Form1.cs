@@ -80,6 +80,14 @@ namespace negras_vergas
                                         Application.Exit();
                                         nigger = false;
                                     }
+                                    else if (nigger == true && streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).IndexOf("fortnite") >= 0)
+                                    {
+                                        System.Diagnostics.Process.Start("https://www.twitch.tv/directory/game/Fortnite");
+                                        using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                                        {
+                                            soundPlayer.Play();
+                                        }
+                                    }
                                     else if (streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).IndexOf("nigger") >= 0 || streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).ToLower().IndexOf("niger") >= 0 || streamingCall.ResponseStream.Current.Results[0].ToString().Substring(37, indexof - 37).ToLower().IndexOf("nigga") >= 0)
                                     {
                                         nigger = true;
