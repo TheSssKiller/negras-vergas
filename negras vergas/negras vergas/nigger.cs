@@ -5,6 +5,7 @@ using System.Media;
 using System.Windows.Forms;
 using System.Speech.Recognition;
 using System.Threading;
+using System.IO;
 
 namespace negras_vergas
 {
@@ -15,10 +16,48 @@ namespace negras_vergas
         {
             InitializeComponent();
         }
+        bool white = false;
+        bool asian = false;
+        bool female = false;
+        bool midget = false;
         bool nigger1 = false;
         private async void Form1_LoadAsync(object help, EventArgs e)
         {
-            niggerbox.Image = Properties.Resources.negro;
+            string settings;
+            try
+            {
+                settings = File.ReadAllText("settings");
+            }
+            catch
+            {
+                File.WriteAllText("settings", "white = fals\nasian = fals\nfemale = fals\nmidget = fals");
+                settings = File.ReadAllText("settings");
+            }
+            if (settings.Substring(settings.IndexOf("white") + 8, 4) == "true")
+                white = true;
+            else if (settings.Substring(settings.IndexOf("asian") + 8, 4) == "true")
+                asian = true;
+            if (settings.Substring(settings.IndexOf("female") + 9, 4) == "true")
+                female = true;
+            if (settings.Substring(settings.IndexOf("midget") + 9, 4) == "true")
+                midget = true;
+            if (white == true && female == true)
+                niggerbox.Image = Properties.Resources.whitewoman;
+            else if (white == true && female == false)
+                niggerbox.Image = Properties.Resources.whitenegro;
+            else if (asian == true && female == true)
+                niggerbox.Image = Properties.Resources.asianwoman;
+            else if (asian == true && female == false)
+                niggerbox.Image = Properties.Resources.asiannegro;
+            else if (female == true)
+                niggerbox.Image = Properties.Resources.blackwoman;
+            else
+                niggerbox.Image = Properties.Resources.negro;
+            if(midget == true)
+            {
+                niggerbox.Size = new Size(1200, 200);
+                ClientSize = new Size(ClientSize.Width + 390, ClientSize.Height);
+            }
             Choices commands = new Choices();
             commands.Add(new string[] {"close", "exit", "stop","fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade", "downgrade", "calculator", "white", "black", "female", "male","woman", "man" });
             GrammarBuilder gBuilder = new GrammarBuilder();
@@ -33,9 +72,6 @@ namespace negras_vergas
                 soundPlayer.Play();
             }
         }
-        bool white = false;
-        bool asian = false;
-        bool female = false;
         void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             if (e.Result.Text.ToLower() == "close" || e.Result.Text.ToLower() == "stop" || e.Result.Text.ToLower() == "exit" && nigger1 == true)
