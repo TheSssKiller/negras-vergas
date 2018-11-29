@@ -87,6 +87,10 @@ namespace negras_vergas
             else if (e.Result.Text.ToLower() == "fortnite" && nigger1 == true)
             {
                 System.Diagnostics.Process.Start("https://www.twitch.tv/directory/game/Fortnite");
+                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnyt.wav"))
+                {
+                    soundPlayer.Play();
+                }
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();
@@ -125,7 +129,7 @@ namespace negras_vergas
                 else
                     stringtowrite = stringtowrite + "midget = false";
                 File.WriteAllText("settings", stringtowrite);
-                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                using (var soundPlayer = new SoundPlayer(@"voice lines\midget.wav"))
                 {
                     soundPlayer.Play();
                 }
@@ -134,7 +138,7 @@ namespace negras_vergas
             else if (e.Result.Text.ToLower() == "upgrade" && nigger1 == true)
             {
                 niggerbox.Image = Properties.Resources.bien;
-                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                using (var soundPlayer = new SoundPlayer(@"voice lines\didelis bienis.wav"))
                 {
                     soundPlayer.Play();
                 }
@@ -166,7 +170,7 @@ namespace negras_vergas
                 else
                     stringtowrite = stringtowrite + "midget = false";
                 File.WriteAllText("settings", stringtowrite);
-                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                using (var soundPlayer = new SoundPlayer(@"voice lines\white power.wav"))
                 {
                     soundPlayer.Play();
                 }
@@ -199,7 +203,7 @@ namespace negras_vergas
                 else
                     stringtowrite = stringtowrite + "midget = false";
                 File.WriteAllText("settings", stringtowrite);
-                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                using (var soundPlayer = new SoundPlayer(@"voice lines\as buoteris.wav"))
                 {
                     soundPlayer.Play();
                 }
@@ -232,7 +236,7 @@ namespace negras_vergas
                 else
                     stringtowrite = stringtowrite + "midget = false";
                 File.WriteAllText("settings", stringtowrite);
-                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                using (var soundPlayer = new SoundPlayer(@"voice lines\as vyras.wav"))
                 {
                     soundPlayer.Play();
                 }
@@ -264,7 +268,7 @@ namespace negras_vergas
                 else
                     stringtowrite = stringtowrite + "midget = false";
                 File.WriteAllText("settings", stringtowrite);
-                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                using (var soundPlayer = new SoundPlayer(@"voice lines\bepis.wav"))
                 {
                     soundPlayer.Play();
                 }
@@ -278,7 +282,7 @@ namespace negras_vergas
                     niggerbox.Image = Properties.Resources.whitenegro;
                 else
                     niggerbox.Image = Properties.Resources.negro;
-                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                using (var soundPlayer = new SoundPlayer(@"voice lines\blet.wav"))
                 {
                     soundPlayer.Play();
                 }
@@ -310,7 +314,7 @@ namespace negras_vergas
                 else
                     stringtowrite = stringtowrite + "midget = false";
                 File.WriteAllText("settings", stringtowrite);
-                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                using (var soundPlayer = new SoundPlayer(@"voice lines\ching chong.wav"))
                 {
                     soundPlayer.Play();
                 }
