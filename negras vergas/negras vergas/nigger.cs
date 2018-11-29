@@ -16,10 +16,11 @@ namespace negras_vergas
             InitializeComponent();
         }
         bool nigger1 = false;
+        bool asian = false;
         private async void Form1_LoadAsync(object help, EventArgs e)
         {
             Choices commands = new Choices();
-            commands.Add(new string[] {"close", "exit", "stop","fortnite", "midget", "reddit", "niger", "nigga", "nigger" });
+            commands.Add(new string[] {"close", "exit", "stop","fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade" });
             GrammarBuilder gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             Grammar grammar = new Grammar(gBuilder);
@@ -60,6 +61,23 @@ namespace negras_vergas
                 else
                     pictureBox1.Invoke(new Action(() => pictureBox1.Size = new Size(1200, 200)));
 
+                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                {
+                    soundPlayer.Play();
+                }
+                nigger1 = false;
+            }
+            else if (e.Result.Text.ToLower() == "upgrade" && nigger1 == true)
+            {
+
+                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                {
+                    soundPlayer.Play();
+                }
+                nigger1 = false;
+            }
+            else if (e.Result.Text.ToLower() == "calculator" && nigger1 == true)
+            {
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();
