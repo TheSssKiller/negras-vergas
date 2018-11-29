@@ -121,13 +121,22 @@
   <data name="asiannegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\asiannegro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="asianwoman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\asianwoman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bien" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blackwoman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blackwoman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="whitenegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\whitenegro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whitewoman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whitewoman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

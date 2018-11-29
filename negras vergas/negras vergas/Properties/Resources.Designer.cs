@@ -73,9 +73,29 @@ namespace negras_vergas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap asianwoman {
+            get {
+                object obj = ResourceManager.GetObject("asianwoman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bien {
             get {
                 object obj = ResourceManager.GetObject("bien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blackwoman {
+            get {
+                object obj = ResourceManager.GetObject("blackwoman", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,16 @@ namespace negras_vergas.Properties {
         internal static System.Drawing.Bitmap whitenegro {
             get {
                 object obj = ResourceManager.GetObject("whitenegro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap whitewoman {
+            get {
+                object obj = ResourceManager.GetObject("whitewoman", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

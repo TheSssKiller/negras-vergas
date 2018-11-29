@@ -16,12 +16,11 @@ namespace negras_vergas
             InitializeComponent();
         }
         bool nigger1 = false;
-        //bool asian = false;
         private async void Form1_LoadAsync(object help, EventArgs e)
         {
             niggerbox.Image = Properties.Resources.negro;
             Choices commands = new Choices();
-            commands.Add(new string[] {"close", "exit", "stop","fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade", "downgrade", "calculator", "white", "black" });
+            commands.Add(new string[] {"close", "exit", "stop","fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade", "downgrade", "calculator", "white", "black", "female", "male","woman", "man" });
             GrammarBuilder gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             Grammar grammar = new Grammar(gBuilder);
@@ -36,6 +35,7 @@ namespace negras_vergas
         }
         bool white = false;
         bool asian = false;
+        bool female = false;
         void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             if (e.Result.Text.ToLower() == "close" || e.Result.Text.ToLower() == "stop" || e.Result.Text.ToLower() == "exit" && nigger1 == true)
@@ -86,7 +86,10 @@ namespace negras_vergas
             }
             else if (e.Result.Text.ToLower() == "white" && nigger1 == true)
             {
-                niggerbox.Image = Properties.Resources.whitenegro;
+                if (female == false)
+                    niggerbox.Image = Properties.Resources.whitenegro;
+                else
+                    niggerbox.Image = Properties.Resources.whitewoman;
                 white = true;
                 asian = false;
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
@@ -95,9 +98,42 @@ namespace negras_vergas
                 }
                 nigger1 = false;
             }
+            else if (e.Result.Text.ToLower() == "woman" || e.Result.Text.ToLower() == "female" && nigger1 == true)
+            {
+                if (white == true)
+                    niggerbox.Image = Properties.Resources.whitewoman;
+                else if (asian == true)
+                    niggerbox.Image = Properties.Resources.asianwoman;
+                else
+                    niggerbox.Image = Properties.Resources.blackwoman;
+                female = true;
+                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                {
+                    soundPlayer.Play();
+                }
+                nigger1 = false;
+            }
+            else if (e.Result.Text.ToLower() == "man" || e.Result.Text.ToLower() == "male" && nigger1 == true)
+            {
+                if (white == true)
+                    niggerbox.Image = Properties.Resources.whitenegro;
+                else if (asian == true)
+                    niggerbox.Image = Properties.Resources.asiannegro;
+                else
+                    niggerbox.Image = Properties.Resources.negro;
+                female = false;
+                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
+                {
+                    soundPlayer.Play();
+                }
+                nigger1 = false;
+            }
             else if (e.Result.Text.ToLower() == "black" && nigger1 == true)
             {
-                niggerbox.Image = Properties.Resources.negro;
+                if (female == false)
+                    niggerbox.Image = Properties.Resources.negro;
+                else
+                    niggerbox.Image = Properties.Resources.blackwoman;
                 white = false;
                 asian = false;
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
@@ -122,8 +158,12 @@ namespace negras_vergas
             }
             else if (e.Result.Text.ToLower() == "calculator" && nigger1 == true)
             {
-                niggerbox.Image = Properties.Resources.asiannegro;
+                if (female == false)
+                    niggerbox.Image = Properties.Resources.asiannegro;
+                else
+                    niggerbox.Image = Properties.Resources.asianwoman;
                 asian = true;
+                white = false;
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();

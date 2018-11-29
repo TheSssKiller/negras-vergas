@@ -106,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="negro.ico" />
+    <None Include="Resources\whitewoman.png" />
+    <None Include="Resources\asianwoman.png" />
+    <None Include="Resources\blackwoman.png" />
     <None Include="Resources\whitenegro.png" />
     <None Include="Resources\asiannegro.png" />
     <None Include="Resources\bien.png" />
