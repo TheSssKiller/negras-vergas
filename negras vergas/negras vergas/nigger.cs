@@ -21,7 +21,7 @@ namespace negras_vergas
         {
             niggerbox.Image = Properties.Resources.negro;
             Choices commands = new Choices();
-            commands.Add(new string[] {"close", "exit", "stop","fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade" });
+            commands.Add(new string[] {"close", "exit", "stop","fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade", "downgrade" });
             GrammarBuilder gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             Grammar grammar = new Grammar(gBuilder);
@@ -34,7 +34,6 @@ namespace negras_vergas
                 soundPlayer.Play();
             }
         }
-        bool bien = false;
         void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             if (e.Result.Text.ToLower() == "close" || e.Result.Text.ToLower() == "stop" || e.Result.Text.ToLower() == "exit" && nigger1 == true)
@@ -71,16 +70,16 @@ namespace negras_vergas
             }
             else if (e.Result.Text.ToLower() == "upgrade" && nigger1 == true)
             {
-                if (bien == false)
+                niggerbox.Image = Properties.Resources.bien;
+                using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
-                    niggerbox.Image = Properties.Resources.bien;
-                    bien = true;
+                    soundPlayer.Play();
                 }
-                else
-                {
-                    niggerbox.Image = Properties.Resources.negro;
-                    bien = false;
-                }
+                nigger1 = false;
+            }
+            else if (e.Result.Text.ToLower() == "downgrade" && nigger1 == true)
+            {
+                niggerbox.Image = Properties.Resources.negro;
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();
