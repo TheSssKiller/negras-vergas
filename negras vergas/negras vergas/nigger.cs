@@ -59,7 +59,7 @@ namespace negras_vergas
                 ClientSize = new Size(ClientSize.Width + 390, ClientSize.Height);
             }
             Choices commands = new Choices();
-            commands.Add(new string[] {"close", "exit", "stop","fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade", "downgrade", "calculator", "white", "black", "female", "male","woman", "man" });
+            commands.Add(new string[] {"close","fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade", "downgrade", "calculator", "white", "black", "female", "male","woman", "man" });
             GrammarBuilder gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             Grammar grammar = new Grammar(gBuilder);
@@ -74,7 +74,7 @@ namespace negras_vergas
         }
         void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            if (e.Result.Text.ToLower() == "close" || e.Result.Text.ToLower() == "stop" || e.Result.Text.ToLower() == "exit" && nigger1 == true)
+            if (e.Result.Text.ToLower() == "close" && nigger1 == true)
             {
                 using (var soundPlayer = new SoundPlayer(@"voice lines\dw.wav"))
                 {
@@ -99,12 +99,32 @@ namespace negras_vergas
                 {
                     niggerbox.Invoke(new Action(() => niggerbox.Size = new Size(810, 750)));
                     ClientSize = new Size(ClientSize.Width - 390, ClientSize.Height);
+                    midget = false;
                 }
                 else
                 {
                     niggerbox.Invoke(new Action(() => niggerbox.Size = new Size(1200, 200)));
                     ClientSize = new Size(ClientSize.Width + 390, ClientSize.Height);
+                    midget = true;
                 }
+                string stringtowrite = "";
+                if (white == true)
+                    stringtowrite = stringtowrite + "white = true\n";
+                else
+                    stringtowrite = stringtowrite + "white = fals\n";
+                if (asian == true)
+                    stringtowrite = stringtowrite + "asian = true\n";
+                else
+                    stringtowrite = stringtowrite + "asian = false\n";
+                if (female == true)
+                    stringtowrite = stringtowrite + "female = true\n";
+                else
+                    stringtowrite = stringtowrite + "female = fals\n";
+                if (midget == true)
+                    stringtowrite = stringtowrite + "midget = true";
+                else
+                    stringtowrite = stringtowrite + "midget = false";
+                File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();
@@ -128,6 +148,24 @@ namespace negras_vergas
                     niggerbox.Image = Properties.Resources.whitewoman;
                 white = true;
                 asian = false;
+                string stringtowrite = "";
+                if (white == true)
+                    stringtowrite = stringtowrite + "white = true\n";
+                else
+                    stringtowrite = stringtowrite + "white = fals\n";
+                if (asian == true)
+                    stringtowrite = stringtowrite + "asian = true\n";
+                else
+                    stringtowrite = stringtowrite + "asian = false\n";
+                if (female == true)
+                    stringtowrite = stringtowrite + "female = true\n";
+                else
+                    stringtowrite = stringtowrite + "female = fals\n";
+                if (midget == true)
+                    stringtowrite = stringtowrite + "midget = true";
+                else
+                    stringtowrite = stringtowrite + "midget = false";
+                File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();
@@ -143,6 +181,24 @@ namespace negras_vergas
                 else
                     niggerbox.Image = Properties.Resources.blackwoman;
                 female = true;
+                string stringtowrite = "";
+                if (white == true)
+                    stringtowrite = stringtowrite + "white = true\n";
+                else
+                    stringtowrite = stringtowrite + "white = fals\n";
+                if (asian == true)
+                    stringtowrite = stringtowrite + "asian = true\n";
+                else
+                    stringtowrite = stringtowrite + "asian = false\n";
+                if (female == true)
+                    stringtowrite = stringtowrite + "female = true\n";
+                else
+                    stringtowrite = stringtowrite + "female = fals\n";
+                if (midget == true)
+                    stringtowrite = stringtowrite + "midget = true";
+                else
+                    stringtowrite = stringtowrite + "midget = false";
+                File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();
@@ -158,6 +214,24 @@ namespace negras_vergas
                 else
                     niggerbox.Image = Properties.Resources.negro;
                 female = false;
+                string stringtowrite = "";
+                if (white == true)
+                    stringtowrite = stringtowrite + "white = true\n";
+                else
+                    stringtowrite = stringtowrite + "white = fals\n";
+                if (asian == true)
+                    stringtowrite = stringtowrite + "asian = true\n";
+                else
+                    stringtowrite = stringtowrite + "asian = false\n";
+                if (female == true)
+                    stringtowrite = stringtowrite + "female = true\n";
+                else
+                    stringtowrite = stringtowrite + "female = fals\n";
+                if (midget == true)
+                    stringtowrite = stringtowrite + "midget = true";
+                else
+                    stringtowrite = stringtowrite + "midget = false";
+                File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();
@@ -172,6 +246,24 @@ namespace negras_vergas
                     niggerbox.Image = Properties.Resources.blackwoman;
                 white = false;
                 asian = false;
+                string stringtowrite = "";
+                if (white == true)
+                    stringtowrite = stringtowrite + "white = true\n";
+                else
+                    stringtowrite = stringtowrite + "white = fals\n";
+                if (asian == true)
+                    stringtowrite = stringtowrite + "asian = true\n";
+                else
+                    stringtowrite = stringtowrite + "asian = false\n";
+                if (female == true)
+                    stringtowrite = stringtowrite + "female = true\n";
+                else
+                    stringtowrite = stringtowrite + "female = fals\n";
+                if (midget == true)
+                    stringtowrite = stringtowrite + "midget = true";
+                else
+                    stringtowrite = stringtowrite + "midget = false";
+                File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();
@@ -200,6 +292,24 @@ namespace negras_vergas
                     niggerbox.Image = Properties.Resources.asianwoman;
                 asian = true;
                 white = false;
+                string stringtowrite = "";
+                if (white == true)
+                    stringtowrite = stringtowrite + "white = true\n";
+                else
+                    stringtowrite = stringtowrite + "white = fals\n";
+                if (asian == true)
+                    stringtowrite = stringtowrite + "asian = true\n";
+                else
+                    stringtowrite = stringtowrite + "asian = false\n";
+                if (female == true)
+                    stringtowrite = stringtowrite + "female = true\n";
+                else
+                    stringtowrite = stringtowrite + "female = fals\n";
+                if (midget == true)
+                    stringtowrite = stringtowrite + "midget = true";
+                else
+                    stringtowrite = stringtowrite + "midget = false";
+                File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();
