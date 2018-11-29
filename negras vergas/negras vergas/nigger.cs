@@ -119,7 +119,7 @@ namespace negras_vergas
                 if (asian == true)
                     stringtowrite = stringtowrite + "asian = true\n";
                 else
-                    stringtowrite = stringtowrite + "asian = false\n";
+                    stringtowrite = stringtowrite + "asian = fals\n";
                 if (female == true)
                     stringtowrite = stringtowrite + "female = true\n";
                 else
@@ -127,7 +127,7 @@ namespace negras_vergas
                 if (midget == true)
                     stringtowrite = stringtowrite + "midget = true";
                 else
-                    stringtowrite = stringtowrite + "midget = false";
+                    stringtowrite = stringtowrite + "midget = fals";
                 File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\midget.wav"))
                 {
@@ -160,7 +160,7 @@ namespace negras_vergas
                 if (asian == true)
                     stringtowrite = stringtowrite + "asian = true\n";
                 else
-                    stringtowrite = stringtowrite + "asian = false\n";
+                    stringtowrite = stringtowrite + "asian = fals\n";
                 if (female == true)
                     stringtowrite = stringtowrite + "female = true\n";
                 else
@@ -168,7 +168,7 @@ namespace negras_vergas
                 if (midget == true)
                     stringtowrite = stringtowrite + "midget = true";
                 else
-                    stringtowrite = stringtowrite + "midget = false";
+                    stringtowrite = stringtowrite + "midget = fals";
                 File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\white power.wav"))
                 {
@@ -193,7 +193,7 @@ namespace negras_vergas
                 if (asian == true)
                     stringtowrite = stringtowrite + "asian = true\n";
                 else
-                    stringtowrite = stringtowrite + "asian = false\n";
+                    stringtowrite = stringtowrite + "asian = fals\n";
                 if (female == true)
                     stringtowrite = stringtowrite + "female = true\n";
                 else
@@ -201,7 +201,7 @@ namespace negras_vergas
                 if (midget == true)
                     stringtowrite = stringtowrite + "midget = true";
                 else
-                    stringtowrite = stringtowrite + "midget = false";
+                    stringtowrite = stringtowrite + "midget = fals";
                 File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\as buoteris.wav"))
                 {
@@ -226,7 +226,7 @@ namespace negras_vergas
                 if (asian == true)
                     stringtowrite = stringtowrite + "asian = true\n";
                 else
-                    stringtowrite = stringtowrite + "asian = false\n";
+                    stringtowrite = stringtowrite + "asian = fals\n";
                 if (female == true)
                     stringtowrite = stringtowrite + "female = true\n";
                 else
@@ -234,7 +234,7 @@ namespace negras_vergas
                 if (midget == true)
                     stringtowrite = stringtowrite + "midget = true";
                 else
-                    stringtowrite = stringtowrite + "midget = false";
+                    stringtowrite = stringtowrite + "midget = fals";
                 File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\as vyras.wav"))
                 {
@@ -258,7 +258,7 @@ namespace negras_vergas
                 if (asian == true)
                     stringtowrite = stringtowrite + "asian = true\n";
                 else
-                    stringtowrite = stringtowrite + "asian = false\n";
+                    stringtowrite = stringtowrite + "asian = fals\n";
                 if (female == true)
                     stringtowrite = stringtowrite + "female = true\n";
                 else
@@ -266,7 +266,7 @@ namespace negras_vergas
                 if (midget == true)
                     stringtowrite = stringtowrite + "midget = true";
                 else
-                    stringtowrite = stringtowrite + "midget = false";
+                    stringtowrite = stringtowrite + "midget = fals";
                 File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\bepis.wav"))
                 {
@@ -304,7 +304,7 @@ namespace negras_vergas
                 if (asian == true)
                     stringtowrite = stringtowrite + "asian = true\n";
                 else
-                    stringtowrite = stringtowrite + "asian = false\n";
+                    stringtowrite = stringtowrite + "asian = fals\n";
                 if (female == true)
                     stringtowrite = stringtowrite + "female = true\n";
                 else
@@ -312,7 +312,7 @@ namespace negras_vergas
                 if (midget == true)
                     stringtowrite = stringtowrite + "midget = true";
                 else
-                    stringtowrite = stringtowrite + "midget = false";
+                    stringtowrite = stringtowrite + "midget = fals";
                 File.WriteAllText("settings", stringtowrite);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\ching chong.wav"))
                 {
