@@ -69,7 +69,8 @@ namespace negras_vergas
             }
             else if (e.Result.Text.ToLower() == "upgrade" && nigger1 == true)
             {
-
+                if (pictureBox1.Image == Properties.Resources.negro)
+                    pictureBox1.Image = Properties.Resources.bien;
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();
