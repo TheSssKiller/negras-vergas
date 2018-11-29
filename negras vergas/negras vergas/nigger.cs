@@ -16,9 +16,10 @@ namespace negras_vergas
             InitializeComponent();
         }
         bool nigger1 = false;
-        bool asian = false;
+        //bool asian = false;
         private async void Form1_LoadAsync(object help, EventArgs e)
         {
+            niggerbox.Image = Properties.Resources.negro;
             Choices commands = new Choices();
             commands.Add(new string[] {"close", "exit", "stop","fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade" });
             GrammarBuilder gBuilder = new GrammarBuilder();
@@ -33,6 +34,7 @@ namespace negras_vergas
                 soundPlayer.Play();
             }
         }
+        bool bien = false;
         void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             if (e.Result.Text.ToLower() == "close" || e.Result.Text.ToLower() == "stop" || e.Result.Text.ToLower() == "exit" && nigger1 == true)
@@ -56,10 +58,10 @@ namespace negras_vergas
             }
             else if (e.Result.Text.ToLower() == "midget" && nigger1 == true)
             {
-                if (pictureBox1.Size.Height == 200)
-                    pictureBox1.Invoke(new Action(() => pictureBox1.Size = new Size(810, 750)));
+                if (niggerbox.Size.Height == 200)
+                    niggerbox.Invoke(new Action(() => niggerbox.Size = new Size(810, 750)));
                 else
-                    pictureBox1.Invoke(new Action(() => pictureBox1.Size = new Size(1200, 200)));
+                    niggerbox.Invoke(new Action(() => niggerbox.Size = new Size(1200, 200)));
 
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
@@ -69,8 +71,16 @@ namespace negras_vergas
             }
             else if (e.Result.Text.ToLower() == "upgrade" && nigger1 == true)
             {
-                if (pictureBox1.Image == Properties.Resources.negro)
-                    pictureBox1.Image = Properties.Resources.bien;
+                if (bien == false)
+                {
+                    niggerbox.Image = Properties.Resources.bien;
+                    bien = true;
+                }
+                else
+                {
+                    niggerbox.Image = Properties.Resources.negro;
+                    bien = false;
+                }
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnite.wav"))
                 {
                     soundPlayer.Play();
@@ -104,13 +114,13 @@ namespace negras_vergas
         private bool mouseDown;
         private Point lastLocation;
 
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        private void niggerbox_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
             lastLocation = e.Location;
         }
 
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        private void niggerbox_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseDown)
             {
@@ -121,7 +131,7 @@ namespace negras_vergas
             }
         }
 
-        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        private void niggerbox_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
         }

@@ -29,47 +29,47 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nigger));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.niggerbox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.niggerbox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // niggerbox
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::negras_vergas.Properties.Resources.negro;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(810, 750);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            this.niggerbox.BackColor = System.Drawing.Color.Transparent;
+            this.niggerbox.Image = global::negras_vergas.Properties.Resources.negro;
+            this.niggerbox.Location = new System.Drawing.Point(-4, -4);
+            this.niggerbox.Name = "niggerbox";
+            this.niggerbox.Size = new System.Drawing.Size(810, 750);
+            this.niggerbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.niggerbox.TabIndex = 0;
+            this.niggerbox.TabStop = false;
+            this.niggerbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.niggerbox_MouseDown);
+            this.niggerbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.niggerbox_MouseMove);
+            this.niggerbox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.niggerbox_MouseUp);
             // 
-            // Form1
+            // nigger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 748);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.niggerbox);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "nigger";
             this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.Form1_LoadAsync);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.niggerbox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox niggerbox;
     }
 }
 
