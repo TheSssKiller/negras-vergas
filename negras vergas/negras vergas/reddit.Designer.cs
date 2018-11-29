@@ -223,7 +223,6 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
