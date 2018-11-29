@@ -176,7 +176,7 @@ namespace negras_vergas
                 }
                 nigger1 = false;
             }
-            else if (e.Result.Text.ToLower() == "woman" || e.Result.Text.ToLower() == "female" && nigger1 == true)
+            else if (e.Result.Text.ToLower() == "woman" && nigger1 == true || e.Result.Text.ToLower() == "female" && nigger1 == true)
             {
                 if (white == true)
                     niggerbox.Image = Properties.Resources.whitewoman;
@@ -209,7 +209,7 @@ namespace negras_vergas
                 }
                 nigger1 = false;
             }
-            else if (e.Result.Text.ToLower() == "man" || e.Result.Text.ToLower() == "male" && nigger1 == true)
+            else if (e.Result.Text.ToLower() == "man" && nigger1 == true || e.Result.Text.ToLower() == "male" && nigger1 == true)
             {
                 if (white == true)
                     niggerbox.Image = Properties.Resources.whitenegro;
