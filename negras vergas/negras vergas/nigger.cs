@@ -53,13 +53,13 @@ namespace negras_vergas
                 niggerbox.Image = Properties.Resources.blackwoman;
             else
                 niggerbox.Image = Properties.Resources.negro;
-            if(midget == true)
+            if (midget == true)
             {
                 niggerbox.Size = new Size(1200, 200);
                 ClientSize = new Size(ClientSize.Width + 390, ClientSize.Height);
             }
             Choices commands = new Choices();
-            commands.Add(new string[] {"close","fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade", "downgrade", "calculator", "white", "black", "female", "male","woman", "man" });
+            commands.Add(new string[] { "close", "fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade", "downgrade", "calculator", "white", "black", "female", "male", "woman", "man" });
             GrammarBuilder gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             Grammar grammar = new Grammar(gBuilder);
@@ -111,24 +111,7 @@ namespace negras_vergas
                     ClientSize = new Size(ClientSize.Width + 390, ClientSize.Height);
                     midget = true;
                 }
-                string stringtowrite = "";
-                if (white == true)
-                    stringtowrite = stringtowrite + "white = true\n";
-                else
-                    stringtowrite = stringtowrite + "white = fals\n";
-                if (asian == true)
-                    stringtowrite = stringtowrite + "asian = true\n";
-                else
-                    stringtowrite = stringtowrite + "asian = fals\n";
-                if (female == true)
-                    stringtowrite = stringtowrite + "female = true\n";
-                else
-                    stringtowrite = stringtowrite + "female = fals\n";
-                if (midget == true)
-                    stringtowrite = stringtowrite + "midget = true";
-                else
-                    stringtowrite = stringtowrite + "midget = fals";
-                File.WriteAllText("settings", stringtowrite);
+                save(white, asian, female, midget);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\midget.wav"))
                 {
                     soundPlayer.Play();
@@ -152,24 +135,7 @@ namespace negras_vergas
                     niggerbox.Image = Properties.Resources.whitewoman;
                 white = true;
                 asian = false;
-                string stringtowrite = "";
-                if (white == true)
-                    stringtowrite = stringtowrite + "white = true\n";
-                else
-                    stringtowrite = stringtowrite + "white = fals\n";
-                if (asian == true)
-                    stringtowrite = stringtowrite + "asian = true\n";
-                else
-                    stringtowrite = stringtowrite + "asian = fals\n";
-                if (female == true)
-                    stringtowrite = stringtowrite + "female = true\n";
-                else
-                    stringtowrite = stringtowrite + "female = fals\n";
-                if (midget == true)
-                    stringtowrite = stringtowrite + "midget = true";
-                else
-                    stringtowrite = stringtowrite + "midget = fals";
-                File.WriteAllText("settings", stringtowrite);
+                save(white, asian, female, midget);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\white power.wav"))
                 {
                     soundPlayer.Play();
@@ -185,24 +151,7 @@ namespace negras_vergas
                 else
                     niggerbox.Image = Properties.Resources.blackwoman;
                 female = true;
-                string stringtowrite = "";
-                if (white == true)
-                    stringtowrite = stringtowrite + "white = true\n";
-                else
-                    stringtowrite = stringtowrite + "white = fals\n";
-                if (asian == true)
-                    stringtowrite = stringtowrite + "asian = true\n";
-                else
-                    stringtowrite = stringtowrite + "asian = fals\n";
-                if (female == true)
-                    stringtowrite = stringtowrite + "female = true\n";
-                else
-                    stringtowrite = stringtowrite + "female = fals\n";
-                if (midget == true)
-                    stringtowrite = stringtowrite + "midget = true";
-                else
-                    stringtowrite = stringtowrite + "midget = fals";
-                File.WriteAllText("settings", stringtowrite);
+                save(white, asian, female, midget);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\as buoteris.wav"))
                 {
                     soundPlayer.Play();
@@ -218,24 +167,7 @@ namespace negras_vergas
                 else
                     niggerbox.Image = Properties.Resources.negro;
                 female = false;
-                string stringtowrite = "";
-                if (white == true)
-                    stringtowrite = stringtowrite + "white = true\n";
-                else
-                    stringtowrite = stringtowrite + "white = fals\n";
-                if (asian == true)
-                    stringtowrite = stringtowrite + "asian = true\n";
-                else
-                    stringtowrite = stringtowrite + "asian = fals\n";
-                if (female == true)
-                    stringtowrite = stringtowrite + "female = true\n";
-                else
-                    stringtowrite = stringtowrite + "female = fals\n";
-                if (midget == true)
-                    stringtowrite = stringtowrite + "midget = true";
-                else
-                    stringtowrite = stringtowrite + "midget = fals";
-                File.WriteAllText("settings", stringtowrite);
+                save(white, asian, female, midget);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\as vyras.wav"))
                 {
                     soundPlayer.Play();
@@ -250,24 +182,7 @@ namespace negras_vergas
                     niggerbox.Image = Properties.Resources.blackwoman;
                 white = false;
                 asian = false;
-                string stringtowrite = "";
-                if (white == true)
-                    stringtowrite = stringtowrite + "white = true\n";
-                else
-                    stringtowrite = stringtowrite + "white = fals\n";
-                if (asian == true)
-                    stringtowrite = stringtowrite + "asian = true\n";
-                else
-                    stringtowrite = stringtowrite + "asian = fals\n";
-                if (female == true)
-                    stringtowrite = stringtowrite + "female = true\n";
-                else
-                    stringtowrite = stringtowrite + "female = fals\n";
-                if (midget == true)
-                    stringtowrite = stringtowrite + "midget = true";
-                else
-                    stringtowrite = stringtowrite + "midget = fals";
-                File.WriteAllText("settings", stringtowrite);
+                save(white, asian, female, midget);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\bepis.wav"))
                 {
                     soundPlayer.Play();
@@ -276,9 +191,9 @@ namespace negras_vergas
             }
             else if (e.Result.Text.ToLower() == "downgrade" && nigger1 == true)
             {
-                if(asian == true)
+                if (asian == true)
                     niggerbox.Image = Properties.Resources.asiannegro;
-                else if(white == true)
+                else if (white == true)
                     niggerbox.Image = Properties.Resources.whitenegro;
                 else
                     niggerbox.Image = Properties.Resources.negro;
@@ -296,24 +211,7 @@ namespace negras_vergas
                     niggerbox.Image = Properties.Resources.asianwoman;
                 asian = true;
                 white = false;
-                string stringtowrite = "";
-                if (white == true)
-                    stringtowrite = stringtowrite + "white = true\n";
-                else
-                    stringtowrite = stringtowrite + "white = fals\n";
-                if (asian == true)
-                    stringtowrite = stringtowrite + "asian = true\n";
-                else
-                    stringtowrite = stringtowrite + "asian = fals\n";
-                if (female == true)
-                    stringtowrite = stringtowrite + "female = true\n";
-                else
-                    stringtowrite = stringtowrite + "female = fals\n";
-                if (midget == true)
-                    stringtowrite = stringtowrite + "midget = true";
-                else
-                    stringtowrite = stringtowrite + "midget = fals";
-                File.WriteAllText("settings", stringtowrite);
+                save(white, asian, female, midget);
                 using (var soundPlayer = new SoundPlayer(@"voice lines\ching chong.wav"))
                 {
                     soundPlayer.Play();
@@ -338,7 +236,27 @@ namespace negras_vergas
         }
         private bool mouseDown;
         private Point lastLocation;
-
+        static void save(bool white, bool asian, bool female, bool midget)
+        {
+            string stringtowrite = "";
+            if (white == true)
+                stringtowrite = stringtowrite + "white = true\n";
+            else
+                stringtowrite = stringtowrite + "white = fals\n";
+            if (asian == true)
+                stringtowrite = stringtowrite + "asian = true\n";
+            else
+                stringtowrite = stringtowrite + "asian = fals\n";
+            if (female == true)
+                stringtowrite = stringtowrite + "female = true\n";
+            else
+                stringtowrite = stringtowrite + "female = fals\n";
+            if (midget == true)
+                stringtowrite = stringtowrite + "midget = true";
+            else
+                stringtowrite = stringtowrite + "midget = fals";
+            File.WriteAllText("settings", stringtowrite);
+        }
         private void niggerbox_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
