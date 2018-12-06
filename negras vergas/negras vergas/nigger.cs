@@ -85,15 +85,17 @@ namespace negras_vergas
         {
             if (e.Result.Text.ToLower() == "close" && nigger1 == true)
             {
+                AudioService _service = AudioModule.service1;
                 using (var soundPlayer = new SoundPlayer(@"voice lines\dw.wav"))
                 {
                     soundPlayer.Play();
                 }
                 if (AudioModule.discordbot == true)
                 {
-                    AudioService _service = AudioModule.service1;
+                    _service = AudioModule.service1;
                     await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/dw.wav");
                 }
+                await _service.LeaveAudio(AudioModule.contextguild);
                 Thread.Sleep(2000);
                 Application.Exit();
                 nigger1 = false;
@@ -309,7 +311,6 @@ namespace negras_vergas
                     .AddSingleton(_commands)
                     .AddSingleton(new AudioService())
                     .BuildServiceProvider();
-
                 await InstallCommandsAsync();
 
                 await _client.LoginAsync(TokenType.Bot, token);

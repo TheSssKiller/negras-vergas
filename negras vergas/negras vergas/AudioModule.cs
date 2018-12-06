@@ -21,12 +21,14 @@ public class AudioModule : ModuleBase<ICommandContext>
         contextguild = Context.Guild;
         contextchannel = Context.Channel;
         discordbot = true;
+        await ReplyAsync("Joined channel");
         await _service.SendAudioAsync(Context.Guild, Context.Channel, "voice lines/sv bicas.wav");
     }
     [Command("leave", RunMode = RunMode.Async)]
     public async Task LeaveCmd()
     {
         await _service.LeaveAudio(Context.Guild);
+        await ReplyAsync("bbx vaikai varau vogti");
     }
 
     [Command("play", RunMode = RunMode.Async)]
