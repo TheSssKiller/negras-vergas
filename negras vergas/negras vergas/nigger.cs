@@ -89,6 +89,11 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+                if (AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/dw.wav");
+                }
                 Thread.Sleep(2000);
                 Application.Exit();
                 nigger1 = false;
@@ -104,6 +109,14 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+
+                if (AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/fortnyt.wav");
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/fortnite.wav");
+                }
+
                 nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "midget" && nigger1 == true)
@@ -125,6 +138,12 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+
+                if (AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/midget.wav");
+                }
                 nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "upgrade" && nigger1 == true)
@@ -133,6 +152,12 @@ namespace negras_vergas
                 using (var soundPlayer = new SoundPlayer(@"voice lines\didelis bienis.wav"))
                 {
                     soundPlayer.Play();
+                }
+
+                if (AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/didelis bienis.wav");
                 }
                 nigger1 = false;
             }
@@ -148,6 +173,12 @@ namespace negras_vergas
                 using (var soundPlayer = new SoundPlayer(@"voice lines\white power.wav"))
                 {
                     soundPlayer.Play();
+                }
+
+                if (AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/white power.wav");
                 }
                 nigger1 = false;
             }
@@ -165,6 +196,12 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+
+                if (AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/as buoteris.wav");
+                }
                 nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "man" && nigger1 == true || e.Result.Text.ToLower() == "male" && nigger1 == true)
@@ -181,6 +218,12 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+
+                if (AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/as vyras.wav");
+                }
                 nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "black" && nigger1 == true)
@@ -196,6 +239,12 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+
+                if (AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/bepis.wav");
+                }
                 nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "downgrade" && nigger1 == true)
@@ -209,6 +258,11 @@ namespace negras_vergas
                 using (var soundPlayer = new SoundPlayer(@"voice lines\blet.wav"))
                 {
                     soundPlayer.Play();
+                }
+                if (AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/blet.wav");
                 }
                 nigger1 = false;
             }
@@ -225,6 +279,12 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+
+                if (AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/ching chong.wav");
+                }
                 nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "reddit" && nigger1 == true)
@@ -239,6 +299,7 @@ namespace negras_vergas
             }
             else if (e.Result.Text.ToLower() == "bot" && nigger1 == true)
             {
+                nigger1 = false;
                 string token;
                 _client = new DiscordSocketClient();
                 _commands = new CommandService();
@@ -258,7 +319,6 @@ namespace negras_vergas
                 _commands.Log += Log;
 
                 await Task.Delay(-1);
-                nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "nigger" || e.Result.Text.ToLower() == "niger" || e.Result.Text.ToLower() == "nigga")
             {
@@ -267,31 +327,13 @@ namespace negras_vergas
                 {
                     soundPlayer.Play();
                 }
+                if(AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/ko nori.wav");
+                }
             }
         }
-        //public async Task StartAsync()
-        //{
-        //    string token;
-
-        //    _client = new DiscordSocketClient();
-        //    _commands = new CommandService();
-        //    token = "NTE5MDQyODEzNDU2MDIzNTUy.DurzoA.FDLCHjVjsWY0LEJIpq6lArv6C0U";
-        //    _services = new ServiceCollection()
-        //        .AddSingleton(_client)
-        //        .AddSingleton(_commands)
-        //        .AddSingleton(new AudioService())
-        //        .BuildServiceProvider();
-
-        //    await InstallCommandsAsync();
-
-        //    await _client.LoginAsync(TokenType.Bot, token);
-        //    await _client.StartAsync();
-
-        //    _client.Log += Log;
-        //    _commands.Log += Log;
-
-        //    await Task.Delay(-1);
-        //}
         public async Task InstallCommandsAsync()
         {
 
