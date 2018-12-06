@@ -6,11 +6,20 @@ using System.Windows.Forms;
 using System.Speech.Recognition;
 using System.Threading;
 using System.IO;
+using Discord;
+using Discord.WebSocket;
+using Discord.Commands;
+using Microsoft.Extensions.DependencyInjection;
+using System.Threading.Tasks;
+using System.Reflection;
 
 namespace negras_vergas
 {
     public partial class nigger : Form
     {
+        private CommandService _commands;
+        private DiscordSocketClient _client;
+        private IServiceProvider _services;
         SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
         public nigger()
         {
@@ -59,7 +68,7 @@ namespace negras_vergas
                 ClientSize = new Size(ClientSize.Width + 390, ClientSize.Height);
             }
             Choices commands = new Choices();
-            commands.Add(new string[] { "close", "fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade", "downgrade", "calculator", "white", "black", "female", "male", "woman", "man" });
+            commands.Add(new string[] { "close", "fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade", "downgrade", "calculator", "white", "black", "female", "male", "woman", "man", "bot" });
             GrammarBuilder gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             Grammar grammar = new Grammar(gBuilder);
@@ -72,7 +81,7 @@ namespace negras_vergas
                 soundPlayer.Play();
             }
         }
-        void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        async void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             if (e.Result.Text.ToLower() == "close" && nigger1 == true)
             {
@@ -220,9 +229,35 @@ namespace negras_vergas
             }
             else if (e.Result.Text.ToLower() == "reddit" && nigger1 == true)
             {
-                Console.Beep(500, 500);
+                using (var soundPlayer = new SoundPlayer(@"voice lines\reddit.wav"))
+                {
+                    soundPlayer.Play();
+                }
                 reddit f2 = new reddit();
                 f2.ShowDialog();
+                nigger1 = false;
+            }
+            else if (e.Result.Text.ToLower() == "bot" && nigger1 == true)
+            {
+                string token;
+                _client = new DiscordSocketClient();
+                _commands = new CommandService();
+                token = "NTE5MDQyODEzNDU2MDIzNTUy.DurzoA.FDLCHjVjsWY0LEJIpq6lArv6C0U";
+                _services = new ServiceCollection()
+                    .AddSingleton(_client)
+                    .AddSingleton(_commands)
+                    .AddSingleton(new AudioService())
+                    .BuildServiceProvider();
+
+                await InstallCommandsAsync();
+
+                await _client.LoginAsync(TokenType.Bot, token);
+                await _client.StartAsync();
+
+                _client.Log += Log;
+                _commands.Log += Log;
+
+                await Task.Delay(-1);
                 nigger1 = false;
             }
             else if (e.Result.Text.ToLower() == "nigger" || e.Result.Text.ToLower() == "niger" || e.Result.Text.ToLower() == "nigga")
@@ -233,6 +268,57 @@ namespace negras_vergas
                     soundPlayer.Play();
                 }
             }
+        }
+        //public async Task StartAsync()
+        //{
+        //    string token;
+
+        //    _client = new DiscordSocketClient();
+        //    _commands = new CommandService();
+        //    token = "NTE5MDQyODEzNDU2MDIzNTUy.DurzoA.FDLCHjVjsWY0LEJIpq6lArv6C0U";
+        //    _services = new ServiceCollection()
+        //        .AddSingleton(_client)
+        //        .AddSingleton(_commands)
+        //        .AddSingleton(new AudioService())
+        //        .BuildServiceProvider();
+
+        //    await InstallCommandsAsync();
+
+        //    await _client.LoginAsync(TokenType.Bot, token);
+        //    await _client.StartAsync();
+
+        //    _client.Log += Log;
+        //    _commands.Log += Log;
+
+        //    await Task.Delay(-1);
+        //}
+        public async Task InstallCommandsAsync()
+        {
+
+            _client.MessageReceived += HandleCommandAsync;
+
+            await _commands.AddModulesAsync(Assembly.GetEntryAssembly());
+        }
+        private async Task HandleCommandAsync(SocketMessage messageParam)
+        {
+
+            var message = messageParam as SocketUserMessage;
+            if (message == null) return;
+
+            int argPos = 0;
+
+            if (!(message.HasCharPrefix('~', ref argPos) || message.HasMentionPrefix(_client.CurrentUser, ref argPos))) return;
+
+            var context = new SocketCommandContext(_client, message);
+
+            var result = await _commands.ExecuteAsync(context, argPos, _services);
+            if (!result.IsSuccess)
+                await context.Channel.SendMessageAsync(result.ErrorReason);
+        }
+        private Task Log(LogMessage message)
+        {
+            Console.WriteLine(message.ToString());
+            return Task.CompletedTask;
         }
         private bool mouseDown;
         private Point lastLocation;
