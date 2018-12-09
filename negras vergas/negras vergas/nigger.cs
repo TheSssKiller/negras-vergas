@@ -68,7 +68,7 @@ namespace negras_vergas
                 ClientSize = new Size(ClientSize.Width + 390, ClientSize.Height);
             }
             Choices commands = new Choices();
-            commands.Add(new string[] { "close", "fortnite", "midget", "reddit", "niger", "nigga", "nigger", "upgrade", "downgrade", "calculator", "white", "black", "female", "male", "woman", "man", "bot" });
+            commands.Add(new string[] { "close", "fortnite", "midget", "reddit", "niger","enlarge", "nigga", "nigger", "upgrade", "downgrade", "calculator", "white", "black", "female", "male", "woman", "man", "bot" });
             GrammarBuilder gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             Grammar grammar = new Grammar(gBuilder);
@@ -83,24 +83,24 @@ namespace negras_vergas
         }
         async void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            if (e.Result.Text.ToLower() == "close" && nigger1 == true)
-            {
-                AudioService _service = AudioModule.service1;
-                using (var soundPlayer = new SoundPlayer(@"voice lines\dw.wav"))
-                {
-                    soundPlayer.Play();
-                }
-                if (AudioModule.discordbot == true)
-                {
-                    _service = AudioModule.service1;
-                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/dw.wav");
-                }
-                await _service.LeaveAudio(AudioModule.contextguild);
-                Thread.Sleep(2000);
-                Application.Exit();
-                nigger1 = false;
-            }
-            else if (e.Result.Text.ToLower() == "fortnite" && nigger1 == true)
+            //if (e.Result.Text.ToLower() == "close" && nigger1 == true)
+            //{
+            //    AudioService _service = AudioModule.service1;
+            //    using (var soundPlayer = new SoundPlayer(@"voice lines\dw.wav"))
+            //    {
+            //        soundPlayer.Play();
+            //    }
+            //    if (AudioModule.discordbot == true)
+            //    {
+            //        _service = AudioModule.service1;
+            //        await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/dw.wav");
+            //    }
+            //    await _service.LeaveAudio(AudioModule.contextguild);
+            //    Thread.Sleep(2000);
+            //    Application.Exit();
+            //    nigger1 = false;
+            //}
+            if (e.Result.Text.ToLower() == "fortnite" && nigger1 == true)
             {
                 System.Diagnostics.Process.Start("https://www.twitch.tv/directory/game/Fortnite");
                 using (var soundPlayer = new SoundPlayer(@"voice lines\fortnyt.wav"))
@@ -160,6 +160,32 @@ namespace negras_vergas
                 {
                     AudioService _service = AudioModule.service1;
                     await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/didelis bienis.wav");
+                }
+                nigger1 = false;
+            }
+            else if (e.Result.Text.ToLower() == "enlarge" && nigger1 == true)
+            {
+                //if (niggerbox.Size.Width == 3500)
+                //{
+                //    niggerbox.Invoke(new Action(() => niggerbox.Size = new Size(810, 750)));
+                //    ClientSize = new Size(ClientSize.Width - 3000, ClientSize.Height);
+                //    //midget = false;
+                //}
+                //else
+                //{
+                    niggerbox.Invoke(new Action(() => niggerbox.Size = new Size(niggerbox.Size.Width+40000, 750)));
+                    ClientSize = new Size(niggerbox.Size.Width + 40000, ClientSize.Height);
+                    //midget = true;
+                //}
+                using (var soundPlayer = new SoundPlayer(@"voice lines\enlarge.wav"))
+                {
+                    soundPlayer.Play();
+                }
+
+                if (AudioModule.discordbot == true)
+                {
+                    AudioService _service = AudioModule.service1;
+                    await _service.SendAudioAsync(AudioModule.contextguild, AudioModule.contextchannel, "voice lines/enlarge.wav");
                 }
                 nigger1 = false;
             }
